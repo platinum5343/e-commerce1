@@ -1,0 +1,66 @@
+.successPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ffde59; /* ✅ matches yellow theme */
+  color: #111;
+  text-align: center;
+  padding: 2rem;
+}
+
+.successCard {
+  background: #fff; /* ✅ matches product card background */
+  color: #222;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 0.6s ease;
+}
+
+.successIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ff4d4d; /* ✅ same red accent used in buttons */
+  animation: pop 0.5s ease;
+}
+
+.homeBtn {
+  padding: 12px 24px;
+  background: #111; /* ✅ matches Add to Cart / Checkout buttons */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.homeBtn:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

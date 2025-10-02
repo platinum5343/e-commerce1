@@ -1,0 +1,239 @@
+.container {
+  padding: 0 2rem 20px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.wrapper > img {
+  width: 20rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: contain;
+  animation: floatCircle 8s ease-in-out infinite;
+}
+
+/* Keyframes for circular floating motion */
+@keyframes floatCircle {
+  0% {
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(calc(-50% + 10px), -10px) rotate(3deg);
+  }
+  50% {
+    transform: translate(-50%, -20px) rotate(0deg);
+  }
+  75% {
+    transform: translate(calc(-50% - 10px), -10px) rotate(-3deg);
+  }
+  100% {
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+}
+.blueCircle {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(135.74deg, #0bb5ff 14.09%, #6dd3fe 83.81%);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cart2 {
+  position: absolute;
+  bottom: 25%;
+  right: 5%;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.cart2 > svg {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  border: 4px solid var(--black);
+  transition: transform 0.2s ease;
+}
+
+.cart2 > svg:hover {
+  transform: scale(1.05);
+}
+
+.signup {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  background: #fff;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: background 0.2s ease;
+}
+
+.signup:hover {
+  background: #f0faff;
+}
+
+.signup > :first-child {
+  font-weight: 600;
+  width: auto;
+}
+
+.signup > :nth-child(2) {
+  border-radius: 50%;
+  border: 1px solid skyblue;
+  display: flex;
+  width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+}
+
+.h_sides {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.text1 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #222;
+}
+
+.text2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #111;
+}
+
+.text2 > :first-child {
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.text2 > :nth-child(2) {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.traffic,
+.customers {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 0.3rem;
+}
+
+.traffic > :first-child,
+.customers > :first-child {
+  font-weight: 800;
+  font-size: 2rem;
+  color: #0bb5ff;
+}
+
+.traffic > :nth-child(2),
+.customers > :nth-child(2) {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Tablet */
+@media screen and (max-width: 856px) {
+  .container {
+    grid-template-areas:
+      "left center center"
+      "right right right";
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .text1,
+  .text2 span:nth-last-of-type(2) {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .text2 > span:first-child {
+    font-size: 1.5rem;
+  }
+
+  .blueCircle {
+    width: 70%;
+    height: 100%;
+  }
+
+  .wrapper > img {
+    top: auto;          /* remove the forced top */
+    bottom: 1rem;       /* anchor closer to bottom */
+    width: 12rem;
+    height: auto;
+    transform: translateX(-50%);
+  }
+
+  .container > :nth-child(1) {
+    grid-area: left;
+  }
+
+  .container > :nth-child(2) {
+    grid-area: center;
+  }
+
+  .container > :nth-child(3) {
+    grid-area: right;
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+  .blueCircle {
+    top: 0;
+    width: 14rem;
+    height: 14rem;
+  }
+
+  .wrapper > img {
+    top: 2rem;
+    width: 10rem;
+    height: auto;
+  }
+
+  .cart2 {
+    transform: scale(0.75);
+    right: -1rem;
+    bottom: 0;
+  }
+
+  .text2 > :first-child {
+    font-size: 1.3rem;
+  }
+
+  .text1 {
+    font-size: 1rem;
+  }
+}

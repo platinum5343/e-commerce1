@@ -1,0 +1,151 @@
+.checkoutContainer {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.checkoutHeader {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+.formCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.formCard label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+  color: #333;
+}
+
+.formCard input,
+.formCard textarea {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+  transition: all 0.2s ease;
+  margin-bottom: 15px;
+}
+
+.formCard input:focus,
+.formCard textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0,123,255,0.3);
+}
+
+.formCard button {
+  margin-top: 10px;
+  font-weight: bold;
+  background: #007bff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.formCard button:hover {
+  background: #0056b3;
+}
+
+.orderSummary {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.orderSummary h4 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.orderSummary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.orderSummary li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+.orderSummary li:last-child {
+  border-bottom: none;
+}
+
+.total {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #222;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .checkoutContainer {
+    padding: 15px;
+  }
+
+  .formCard, .orderSummary {
+    padding: 15px;
+  }
+
+  .checkoutHeader {
+    font-size: 1.5rem;
+  }
+}
+
+/* ... previous styles remain ... */
+
+.formFooter {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end; /* button to the right on desktop */
+}
+
+.submitBtn {
+  background: #007bff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  background: #0056b3;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .formFooter {
+    justify-content: center; /* center button on small screens */
+  }
+
+  .submitBtn {
+    width: 100%; /* full-width button on mobile */
+    padding: 14px;
+  }
+
+  .formCard input,
+  .formCard textarea {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
